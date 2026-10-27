@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px 25px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .full {
+            grid-column: 1 / 3;
+        }
+
+        label {
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+
+        .options {
+            display: flex;
+            gap: 18px;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .options label {
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .range-value {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        input[type="range"] {
+            flex: 1;
+        }
+
+        .buttons {
+            grid-column: 1 / 3;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        input[type="submit"] {
+            background: #2563eb;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background: #e5e7eb;
+        }
+
+        .payment {
+            grid-column: 1 / 3;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .payment input {
+            width: 55px;
+            height: 55px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .hidden-field {
+            display: none;
+        }
+
+        @media (max-width: 650px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            .full,
+            .buttons,
+            .payment {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Patient Registration</h1>
+    <p class="subtitle">Please enter your details for consultation</p>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <input type="hidden" name="patient_id" value="PAT2026">
+
+        <div class="field">
+            <label for="name">Patient Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter full name"
+                   required>
+        </div>
+
+        <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="example@email.com"
+                   required>
+        </div>
+
+        <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Create password"
+                   minlength="6"
+                   required>
+        </div>
+
+        <div class="field">
+            <label for="phone">Contact Number</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="10-digit number"
+                   pattern="[0-9]{10}"
+                   maxlength="10"
+                   required>
+        </div>
+
+        <div class="field">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age"
+                   min="1" max="120"
+                   placeholder="Enter age"
+                   required>
+        </div>
+
+        <div class="field">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="field">
+            <label for="appointment">Appointment Time</label>
+            <input type="time" id="appointment" name="appointment" required>
+        </div>
+
+        <div class="field">
+            <label for="datetime">Appointment Date & Time</label>
+            <input type="datetime-local" id="datetime" name="datetime" required>
+        </div>
+
+        <div class="field">
+            <label for="website">Personal Website / Reference</label>
+            <input type="url" id="website" name="website"
+                   placeholder="https://example.com">
+        </div>
+
+        <div class="field">
+            <label for="doctor">Search Doctor</label>
+            <input type="search" id="doctor" name="doctor"
+                   placeholder="Search doctor name">
+        </div>
+
+        <div class="field">
+            <label for="color">Favorite Consultation Color Theme</label>
+            <input type="color" id="color" name="color" value="#2563eb">
+        </div>
+
+        <div class="field">
+            <label for="record">Medical Record Upload</label>
+            <input type="file" id="record" name="record"
+                   accept=".pdf,.jpg,.jpeg,.png">
+        </div>
+
+        <div class="field">
+            <label for="pain">Pain Level</label>
+
+            <div class="range-value">
+                <input type="range" id="pain" name="pain"
+                       min="0" max="10" value="5"
+                       oninput="painValue.value = this.value">
+
+                <output id="painValue">5</output>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Gender</label>
+
+            <div class="options">
+                <label>
+                    <input type="radio" name="gender" value="male">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="other">
+                    Other
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <label>Known Allergies</label>
+
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="allergy" value="medicine">
+                    Medicine
+                </label>
+
+                <label>
+                    <input type="checkbox" name="allergy" value="food">
+                    Food
+                </label>
+
+                <label>
+                    <input type="checkbox" name="allergy" value="dust">
+                    Dust
+                </label>
+
+                <label>
+                    <input type="checkbox" name="allergy" value="none">
+                    None
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="blood">Blood Group</label>
+
+            <select id="blood" name="blood" required>
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="address">Address</label>
+
+            <textarea id="address" name="address"
+                      placeholder="Enter your complete address"
+                      required></textarea>
+        </div>
+
+        <div class="buttons">
+
+            <input type="submit" value="Submit Registration">
+
+            <input type="reset" value="Reset">
+
+        </div>
+
+        <div class="payment">
+
+            <p><b>Online Payment / Confirmation</b></p>
+
+            <input type="image"
+                   src="images/payment-button.png"
+                   alt="Pay Now">
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

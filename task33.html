@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Event Handling</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: white;
+            width: 450px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #3730a3;
+        }
+
+        #message {
+            font-size: 22px;
+            font-weight: bold;
+            color: #374151;
+            margin: 30px;
+        }
+
+        button {
+            padding: 14px 30px;
+            font-size: 17px;
+            border: none;
+            border-radius: 8px;
+            background-color: #4f46e5;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3730a3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>VIT Website</h1>
+
+        <p id="message">
+            Move your mouse over the button
+        </p>
+
+        <button
+            onmouseover="showWelcome()"
+            onmouseout="restoreText()">
+            Move Mouse Here
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function showWelcome() {
+
+            document.getElementById("message").innerHTML =
+                "Welcome to VIT!";
+
+        }
+
+
+        function restoreText() {
+
+            document.getElementById("message").innerHTML =
+                "Move your mouse over the button";
+
+        }
+
+    </script>
+
+</body>
+</html>

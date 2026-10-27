@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MiniProject - WebLab: Centralized Interactive Web Development Laboratory Dashboard">
+  <title>MiniProject — WebLab | Interactive Web Development Laboratory</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="app-sidebar" id="app-sidebar" aria-label="Main Navigation">
+      <div class="sidebar-header">
+        <div class="brand-wrapper">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M10 2v7.31L4.69 17A2 2 0 0 0 6.4 20h11.2a2 2 0 0 0 1.71-3L14 9.31V2h-4z"/>
+              <line x1="8.5" y1="2" x2="15.5" y2="2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="brand-title">
+              WebLab <span class="brand-badge">PRO</span>
+            </div>
+            <div class="brand-subtitle">Interactive Dev Studio</div>
+          </div>
+        </div>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Sidebar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- Main Navigation -->
+        <div>
+          <div class="nav-section-title">Navigation</div>
+          <ul class="nav-list">
+            <li>
+              <a href="#overview" class="nav-link" data-view="overview">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <span>Overview</span>
+              </a>
+            </li>
+            <li>
+              <a href="#assignments" class="nav-link active" data-category="all">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                <span>All Assignments</span>
+                <span class="nav-badge" id="badge-nav-all">42</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Course Categories -->
+        <div>
+          <div class="nav-section-title">Laboratories</div>
+          <ul class="nav-list">
+            <li>
+              <a href="#category" class="nav-link" data-category="HTML Fundamentals">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>HTML Fundamentals</span>
+              </a>
+            </li>
+            <li>
+              <a href="#category" class="nav-link" data-category="Forms & Validation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                <span>Forms & Validation</span>
+              </a>
+            </li>
+            <li>
+              <a href="#category" class="nav-link" data-category="Mouse Events">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a4 4 0 0 0-4 4v12a4 4 0 0 0 8 0V6a4 4 0 0 0-4-4z"/><line x1="12" y1="6" x2="12" y2="10"/></svg>
+                <span>Mouse Events</span>
+              </a>
+            </li>
+            <li>
+              <a href="#category" class="nav-link" data-category="Keyboard Events">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="8" x2="6" y2="8"/><line x1="10" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="14" y2="8"/><line x1="18" y1="8" x2="18" y2="8"/></svg>
+                <span>Keyboard Events</span>
+              </a>
+            </li>
+            <li>
+              <a href="#category" class="nav-link" data-category="Interactive Components">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                <span>Interactive Components</span>
+              </a>
+            </li>
+            <li>
+              <a href="#category" class="nav-link" data-category="Multimedia & Layouts">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/></svg>
+                <span>Multimedia & Layouts</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- User Collections -->
+        <div>
+          <div class="nav-section-title">My Workspace</div>
+          <ul class="nav-list">
+            <li>
+              <a href="#favorites" class="nav-link" data-view="favorites">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <span>Favorites</span>
+                <span class="nav-badge" id="badge-nav-favorites">0</span>
+              </a>
+            </li>
+            <li>
+              <a href="#recent" class="nav-link" data-view="recent">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Recently Opened</span>
+                <span class="nav-badge" id="badge-nav-recent">0</span>
+              </a>
+            </li>
+            <li>
+              <a href="#completed" class="nav-link" data-view="completed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Completed Tasks</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Student Profile Card in Sidebar -->
+      <div class="sidebar-footer">
+        <div class="student-card">
+          <div class="student-avatar">MJ</div>
+          <div class="student-details">
+            <div class="student-name">Magdiel Jainson K</div>
+            <div class="student-reg">24MIC0041</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+      
+      <!-- Top Sticky Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="mobile-nav-toggle" id="sidebar-toggle-btn" aria-label="Toggle Navigation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+              <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+          
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="search-input" class="search-input" placeholder="Search by title, topic, concept, or filename (e.g. traffic, PIN, audio, regex)..." aria-label="Search assignments">
+            <button class="search-clear-btn" id="search-clear" aria-label="Clear Search">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
+            <span class="search-shortcut-hint">/</span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="status-indicator">
+            <div class="pulse-dot"></div>
+            <span>WebLab Live</span>
+          </div>
+
+          <!-- Theme Toggle Button -->
+          <button class="header-btn" id="theme-toggle-btn" title="Toggle Dark / Light Theme" aria-label="Toggle theme">
+            <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Content Wrapper -->
+      <div class="content-wrapper">
+        
+        <!-- Welcome Hero Section -->
+        <section class="hero-banner" id="overview">
+          <div class="hero-content">
+            <div class="hero-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              Interactive Web Development Laboratory
+            </div>
+            <h1 class="hero-title">Welcome to Your WebLab</h1>
+            <p class="hero-tagline">
+              "One workspace. Every experiment. Your web development journey."<br>
+              Explore your completed web development assignments, revisit concepts, and launch any exercise directly from one organized workspace.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" id="hero-explore-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                Explore Assignments
+              </button>
+              <button class="btn btn-outline" id="hero-categories-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                </svg>
+                View Categories
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dynamic Statistics Cards -->
+        <section class="stats-section" aria-label="Course Statistics">
+          <div class="stats-grid">
+            
+            <div class="stat-card">
+              <div class="stat-icon stat-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-value" id="stat-total">0</span>
+                <span class="stat-label">Total Assignments</span>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon stat-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-value" id="stat-categories">0</span>
+                <span class="stat-label">Available Categories</span>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon stat-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <div class="stat-info" style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                  <span class="stat-value" id="stat-completed">0</span>
+                  <span class="stat-label" id="stat-completed-percent" style="font-weight: 700; color: var(--color-green);">0%</span>
+                </div>
+                <span class="stat-label">Completed Tasks</span>
+                <div class="stat-progress-wrapper">
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="stat-progress-bar" style="width: 0%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon stat-amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-value" id="stat-favorites">0</span>
+                <span class="stat-label">Favorites</span>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon stat-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <div class="stat-info">
+                <span class="stat-value" id="stat-recent">0</span>
+                <span class="stat-label">Recently Opened</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Category Grid Section -->
+        <section class="categories-section" id="categories-section" aria-label="Laboratory Categories">
+          <div class="section-header">
+            <div class="section-title-group">
+              <h2>Explore Laboratory Domains</h2>
+              <p>Select any module below to filter exercises by core topic</p>
+            </div>
+          </div>
+          <div class="category-grid" id="category-grid">
+            <!-- Dynamically populated -->
+          </div>
+        </section>
+
+        <!-- Recently Opened Row (Conditional) -->
+        <section class="recent-section" id="recent-section" style="display: none;" aria-label="Recently Opened">
+          <div class="section-header">
+            <div class="section-title-group">
+              <h2>Recently Opened Exercises</h2>
+              <p>Jump back into your recent test runs and lab previews</p>
+            </div>
+          </div>
+          <div class="recent-carousel" id="recent-list">
+            <!-- Dynamically populated -->
+          </div>
+        </section>
+
+        <!-- Assignments Library Section -->
+        <section class="assignments-section" id="assignments-section" aria-label="Assignment Collection">
+          <div class="section-header">
+            <div class="section-title-group">
+              <h2 id="current-view-title">All Laboratory Assignments</h2>
+              <p id="current-view-description">Complete inventory of interactive web development assignments, experiments, and coursework.</p>
+            </div>
+          </div>
+
+          <!-- Filter & Controls Toolbar -->
+          <div class="filter-bar">
+            <div class="filter-group">
+              <select id="filter-category" class="select-control" aria-label="Filter by category">
+                <option value="all">All Categories</option>
+                <option value="HTML Fundamentals">HTML Fundamentals</option>
+                <option value="Forms & Validation">Forms & Validation</option>
+                <option value="Mouse Events">Mouse Events</option>
+                <option value="Keyboard Events">Keyboard Events</option>
+                <option value="Interactive Components">Interactive Components</option>
+                <option value="Multimedia & Layouts">Multimedia & Layouts</option>
+              </select>
+
+              <select id="filter-tech" class="select-control" aria-label="Filter by technology">
+                <option value="all">All Technologies</option>
+                <option value="HTML5">HTML5</option>
+                <option value="CSS3">CSS3</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Bootstrap 5">Bootstrap 5</option>
+                <option value="Audio API">Audio API</option>
+                <option value="HTML5 Video">HTML5 Video</option>
+              </select>
+
+              <select id="filter-sort" class="select-control" aria-label="Sort assignments">
+                <option value="order-asc">Default Task Order</option>
+                <option value="title-asc">Title (A - Z)</option>
+                <option value="title-desc">Title (Z - A)</option>
+                <option value="category">By Category</option>
+              </select>
+
+              <button class="btn btn-outline btn-sm" id="reset-filters-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+                  <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>
+                </svg>
+                Reset
+              </button>
+            </div>
+
+            <div class="results-meta" id="results-count">
+              Loading assignments...
+            </div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="assignment-grid" id="assignment-grid">
+            <!-- Dynamically populated -->
+          </div>
+        </section>
+
+      </div>
+
+      <!-- App Footer -->
+      <footer class="app-footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <strong>MiniProject — WebLab</strong> &bull; Interactive Web Development Laboratory Dashboard
+          </div>
+          <div class="footer-right">
+            <span>Student: <strong>Magdiel Jainson K</strong></span>
+            <span>Registration: <strong>24MIC0041</strong></span>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- Assignment Details Modal -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog" id="detail-modal">
+      <button class="modal-close-icon" id="modal-close-btn" aria-label="Close dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div id="detail-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- In-App Interactive WebLab Runner Viewport -->
+  <div class="lab-runner-overlay" id="lab-runner" role="dialog" aria-label="Assignment Runner">
+    <div class="runner-header">
+      <div class="runner-header-left">
+        <button class="btn-runner-back" id="runner-close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
+            <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+          </svg>
+          <span>Back to Dashboard</span>
+        </button>
+        <div class="runner-title-group">
+          <h3 id="runner-title">Assignment Title</h3>
+          <span class="badge badge-blue" id="runner-category">Category</span>
+          <span class="runner-path-pill" id="runner-path">path.html</span>
+        </div>
+      </div>
+
+      <div class="runner-header-right">
+        <button class="header-btn" id="runner-reload" title="Reload Assignment">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+        </button>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="runner-open-new-tab">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          <span class="runner-btn-text">Open in New Tab</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="runner-viewport">
+      <iframe id="runner-frame" class="runner-iframe" src="about:blank" title="Assignment Runner Frame"></iframe>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/assignment-registry.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>

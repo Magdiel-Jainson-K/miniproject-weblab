@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Search</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #3730a3;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            border: 2px solid #aaa;
+            border-radius: 7px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        #keyDisplay {
+            margin-top: 25px;
+            font-size: 18px;
+            color: #374151;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Search</h1>
+
+        <p>Enter a student name or ID:</p>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Type here..."
+            onkeydown="handleKey(event)">
+
+        <div id="keyDisplay"></div>
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+
+        function handleKey(event) {
+
+            let input = document.getElementById("searchBox");
+            let keyDisplay = document.getElementById("keyDisplay");
+            let message = document.getElementById("message");
+
+
+            if (event.key === "Enter") {
+
+                keyDisplay.innerHTML = "Key Pressed: Enter";
+
+                message.innerHTML =
+                    "Searching for student...";
+
+            }
+
+            else if (event.key === "Escape") {
+
+                input.value = "";
+
+                keyDisplay.innerHTML = "";
+
+                message.innerHTML = "";
+
+            }
+
+            else {
+
+                keyDisplay.innerHTML =
+                    "Key Pressed: " + event.key;
+
+                message.innerHTML = "";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

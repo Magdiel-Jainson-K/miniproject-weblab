@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Search</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #3730a3;
+        }
+
+        #searchBox {
+            width: 90%;
+            padding: 12px;
+            border: 2px solid #aaa;
+            border-radius: 8px;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        #searchBox:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        #typedText {
+            margin-top: 25px;
+            font-size: 18px;
+            color: #374151;
+        }
+
+        #result {
+            margin-top: 15px;
+            padding: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #166534;
+            background-color: #dcfce7;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Search</h1>
+
+        <p>Enter student name:</p>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Type student name..."
+            oninput="displayText()"
+            onkeydown="searchStudent(event)">
+
+        <div id="typedText"></div>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <script>
+
+        function displayText() {
+
+            let input = document.getElementById("searchBox");
+            let typedText = document.getElementById("typedText");
+
+            input.style.backgroundColor = "#fff7cc";
+
+            typedText.innerHTML =
+                "Entered Text: " + input.value;
+        }
+
+
+        function searchStudent(event) {
+
+            if (event.key === "Enter") {
+
+                let input = document.getElementById("searchBox");
+                let result = document.getElementById("result");
+
+                if (input.value.trim() !== "") {
+
+                    result.innerHTML =
+                        "Searching for: " + input.value;
+
+                    result.style.display = "block";
+
+                } else {
+
+                    result.innerHTML =
+                        "Please enter a student name.";
+
+                    result.style.display = "block";
+                }
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

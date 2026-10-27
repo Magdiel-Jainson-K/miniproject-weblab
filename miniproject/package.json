@@ -1,0 +1,21 @@
+{
+  "name": "miniproject-weblab",
+  "version": "1.0.0",
+  "description": "MiniProject - Interactive Web Development Laboratory Dashboard",
+  "main": "index.html",
+  "scripts": {
+    "start": "node scripts/server.js",
+    "discover": "node scripts/discover-assignments.js",
+    "dev": "node scripts/server.js 3000"
+  },
+  "keywords": [
+    "weblab",
+    "dashboard",
+    "html5",
+    "css3",
+    "javascript",
+    "laboratory"
+  ],
+  "author": "Magdiel Jainson K (24MIC0041)",
+  "license": "ISC"
+}

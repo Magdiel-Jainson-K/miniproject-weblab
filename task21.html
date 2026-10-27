@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+</head>
+
+<body>
+
+    <h1>Student Login Portal</h1>
+
+    <p>Please enter your details to access your account.</p>
+
+    <form action="#" method="post">
+
+        <label for="username">Username or Email Address:</label>
+        <input type="text" id="username" name="username"
+               placeholder="Enter username or email"
+               required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"
+               placeholder="Enter password"
+               minlength="6"
+               required>
+        <br><br>
+
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember">Remember Me</label>
+        <br><br>
+
+        <p><b>Select User Role:</b></p>
+
+        <input type="radio" id="student" name="role" value="student" required>
+        <label for="student">Student</label>
+
+        <input type="radio" id="faculty" name="role" value="faculty">
+        <label for="faculty">Faculty</label>
+
+        <br><br>
+
+        <a href="#">Forgot Password?</a>
+        <br>
+        <a href="#">Create New Account</a>
+
+        <br><br>
+
+        <audio controls>
+            <source src="audio/login-instructions.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p>Login Instructions</p>
+
+        <br>
+
+        <input type="submit" value="Login">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>

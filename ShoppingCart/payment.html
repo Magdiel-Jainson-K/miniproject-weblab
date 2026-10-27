@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Payment Details</h1>
+
+        <form>
+
+            <label>Payment Method</label>
+
+            <div class="options">
+
+                <label>
+                    <input type="radio" name="payment" value="Credit Card" required>
+                    Credit Card
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="Debit Card">
+                    Debit Card
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="UPI">
+                    UPI
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="Net Banking">
+                    Net Banking
+                </label>
+
+                <label>
+                    <input type="radio" name="payment" value="Cash on Delivery">
+                    Cash on Delivery
+                </label>
+
+            </div>
+
+            <label for="holder">Card Holder Name</label>
+            <input type="text" id="holder" name="holder"
+                   placeholder="Name on card">
+
+            <label for="card">Card Number</label>
+            <input type="text" id="card" name="card"
+                   placeholder="Enter 16-digit card number"
+                   pattern="[0-9]{16}"
+                   maxlength="16">
+
+            <label for="expiry">Expiry Date</label>
+            <input type="month" id="expiry" name="expiry">
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv"
+                   placeholder="3-digit CVV"
+                   pattern="[0-9]{3}"
+                   maxlength="3">
+
+            <label for="upi">UPI ID</label>
+            <input type="text" id="upi" name="upi"
+                   placeholder="example@upi">
+
+            <div class="terms">
+
+                <input type="checkbox" id="terms" name="terms" required>
+
+                <label for="terms">
+                    I agree to the Terms and Conditions
+                </label>
+
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Continue</button>
+                <button type="reset">Clear</button>
+            </div>
+
+        </form>
+
+        <div class="navigation">
+            <a href="customer.html">Previous: Customer Details</a>
+            <a href="cart.html">Next: Cart Summary</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

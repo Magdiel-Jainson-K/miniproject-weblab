@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Traffic Signal</title>
+
+    <style>
+        body {
+            background-color: #e5e7eb;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        .signal {
+            width: 130px;
+            background-color: #222;
+            padding: 20px;
+            margin: 30px auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .light {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            margin: 15px auto;
+            opacity: 0.35;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: limegreen;
+        }
+
+        .active {
+            opacity: 1;
+            transform: scale(1.15);
+            box-shadow: 0 0 25px currentColor;
+        }
+
+        #message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Traffic Signal</h1>
+
+    <div class="signal">
+
+        <div class="light red"
+             onmouseover="showMessage('STOP', this)"
+             onmouseout="hideMessage(this)">
+        </div>
+
+        <div class="light yellow"
+             onmouseover="showMessage('READY', this)"
+             onmouseout="hideMessage(this)">
+        </div>
+
+        <div class="light green"
+             onmouseover="showMessage('GO', this)"
+             onmouseout="hideMessage(this)">
+        </div>
+
+    </div>
+
+    <div id="message"></div>
+
+
+    <script>
+
+        function showMessage(text, signal) {
+
+            document.getElementById("message").innerHTML = text;
+
+            signal.classList.add("active");
+        }
+
+        function hideMessage(signal) {
+            document.getElementById("message").innerHTML = "";
+            signal.classList.remove("active");
+        }
+    </script>
+</body>
+</html>

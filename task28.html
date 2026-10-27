@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #374151;
+            margin-bottom: 25px;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #374151;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        select[multiple] {
+            height: 130px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #output {
+            margin-top: 25px;
+            padding: 18px;
+            background-color: #ecfdf5;
+            border: 1px solid #86efac;
+            border-radius: 8px;
+            color: #166534;
+            display: none;
+        }
+
+        #output h3 {
+            margin-top: 0;
+            color: #166534;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Course Registration</h1>
+
+        <form id="courseForm">
+
+            <div class="field">
+
+                <label for="studentName">
+                    Student Name
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter student name">
+
+                <div id="nameError" class="error"></div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="department">
+                    Department
+                </label>
+
+                <select id="department">
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option value="CSE">
+                        CSE
+                    </option>
+
+                    <option value="IT">
+                        IT
+                    </option>
+
+                    <option value="ECE">
+                        ECE
+                    </option>
+
+                    <option value="EEE">
+                        EEE
+                    </option>
+
+                </select>
+
+                <div id="departmentError" class="error"></div>
+
+            </div>
+
+
+            <div class="field">
+
+                <label for="languages">
+                    Programming Languages
+                </label>
+
+                <select id="languages" multiple>
+
+                    <option value="Java">
+                        Java
+                    </option>
+
+                    <option value="Python">
+                        Python
+                    </option>
+
+                    <option value="JavaScript">
+                        JavaScript
+                    </option>
+
+                    <option value="C++">
+                        C++
+                    </option>
+
+                </select>
+
+                <div id="languageError" class="error"></div>
+
+            </div>
+
+
+            <button type="submit">
+                Register Course
+            </button>
+
+        </form>
+
+
+        <div id="output"></div>
+
+    </div>
+
+
+    <script>
+
+        document.getElementById("courseForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let studentName =
+                document.getElementById("studentName").value.trim();
+
+            let department =
+                document.getElementById("department").value;
+
+            let languages =
+                document.getElementById("languages");
+
+            let selectedLanguages =
+                Array.from(languages.selectedOptions);
+
+
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("departmentError").innerHTML = "";
+            document.getElementById("languageError").innerHTML = "";
+
+            document.getElementById("output").style.display = "none";
+
+
+            let valid = true;
+
+
+            let namePattern = /^[A-Za-z ]+$/;
+
+
+            if (studentName === "") {
+
+                document.getElementById("nameError").innerHTML =
+                    "Student name is required.";
+
+                valid = false;
+
+            } else if (!namePattern.test(studentName)) {
+
+                document.getElementById("nameError").innerHTML =
+                    "Student name should contain only alphabets and spaces.";
+
+                valid = false;
+            }
+
+
+            if (department === "") {
+
+                document.getElementById("departmentError").innerHTML =
+                    "Please select a department.";
+
+                valid = false;
+            }
+
+
+            if (selectedLanguages.length === 0) {
+
+                document.getElementById("languageError").innerHTML =
+                    "Please select at least one programming language.";
+
+                valid = false;
+            }
+
+
+            if (valid) {
+
+                let languageList = [];
+
+                selectedLanguages.forEach(function(language) {
+
+                    languageList.push(language.value);
+
+                });
+
+
+                document.getElementById("output").innerHTML = `
+
+                    <h3>Registration Successful</h3>
+
+                    <p>
+                        <b>Student Name:</b>
+                        ${studentName}
+                    </p>
+
+                    <p>
+                        <b>Department:</b>
+                        ${department}
+                    </p>
+
+                    <p>
+                        <b>Programming Languages:</b>
+                        ${languageList.join(", ")}
+                    </p>
+
+                `;
+
+                document.getElementById("output").style.display = "block";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

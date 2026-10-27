@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart Summary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Cart Summary</h1>
+
+        <table>
+
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+
+            <tr>
+                <td>Wireless Headphones</td>
+                <td>1</td>
+                <td>$1,999</td>
+                <td>$1,999</td>
+            </tr>
+
+            <tr>
+                <td>Smart Watch</td>
+                <td>2</td>
+                <td>$2,499</td>
+                <td>$4,998</td>
+            </tr>
+
+            <tr class="grand-total">
+                <td colspan="3">Total Amount</td>
+                <td>$6,997</td>
+            </tr>
+
+        </table>
+
+        <div class="order-buttons">
+
+            <button type="button" onclick="alert('Order Placed Successfully!')">
+                Place Order
+            </button>
+
+            <button type="button" onclick="alert('Order Cancelled')">
+                Cancel
+            </button>
+
+        </div>
+
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="customer.html">Customer Details</a>
+            <a href="payment.html">Payment Details</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Exam Question</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
+            padding: 40px;
+        }
+
+        .exam-box {
+            width: 550px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #3730a3;
+        }
+
+        .question {
+            font-size: 19px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .option {
+            padding: 14px;
+            margin: 10px 0;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .option:hover {
+            background-color: #f3f4f6;
+        }
+
+        .selected {
+            background-color: #bfdbfe;
+            border-color: #2563eb;
+            font-weight: bold;
+        }
+
+        #submitBtn {
+            display: block;
+            margin: 25px auto 10px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button-hover {
+            background-color: #16a34a !important;
+            transform: scale(1.05);
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #166534;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="exam-box">
+
+        <h1>Online Exam</h1>
+
+        <div class="question">
+            1. Which language is used to create web pages?
+        </div>
+
+        <div class="option" onclick="selectAnswer(this)">
+            HTML
+        </div>
+
+        <div class="option" onclick="selectAnswer(this)">
+            Python
+        </div>
+
+        <div class="option" onclick="selectAnswer(this)">
+            Java
+        </div>
+
+        <div class="option" onclick="selectAnswer(this)">
+            C++
+        </div>
+
+        <button
+            id="submitBtn"
+            onclick="submitAnswer()"
+            onmouseover="highlightButton()"
+            onmouseout="removeHighlight()">
+            Submit Answer
+        </button>
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+
+        let selectedOption = null;
+
+
+        function selectAnswer(option) {
+
+            let options = document.querySelectorAll(".option");
+
+            options.forEach(function(item) {
+                item.classList.remove("selected");
+            });
+
+            option.classList.add("selected");
+
+            selectedOption = option.innerHTML.trim();
+
+        }
+
+
+        function submitAnswer() {
+
+            let message = document.getElementById("message");
+
+            if (selectedOption === null) {
+
+                message.innerHTML =
+                    "Please select an answer first.";
+
+                message.style.color = "red";
+
+            } else {
+
+                message.innerHTML =
+                    "Answer Submitted Successfully";
+
+                message.style.color = "#166534";
+
+            }
+
+        }
+
+
+        function highlightButton() {
+
+            document.getElementById("submitBtn")
+                .classList.add("button-hover");
+
+        }
+
+
+        function removeHighlight() {
+
+            document.getElementById("submitBtn")
+                .classList.remove("button-hover");
+
+        }
+
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Enter") {
+
+                submitAnswer();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

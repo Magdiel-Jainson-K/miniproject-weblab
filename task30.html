@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Product Card</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #dbeafe, #f3e8ff);
+            text-align: center;
+            padding: 40px;
+        }
+
+        .product-card {
+            width: 320px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+            filter: brightness(0.8);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #extraInfo {
+            display: none;
+            background-color: #f1f5f9;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #details {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #166534;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Interactive Product Card</h1>
+
+    <div class="product-card">
+
+        <img
+            id="productImage"
+            class="product-image"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"
+            alt="Running Shoes"
+            onmouseover="showInfo()"
+            onmouseout="hideInfo()">
+
+        <h2>Running Shoes</h2>
+
+        <div id="extraInfo">
+            Lightweight running shoes with comfortable
+            cushioning and a breathable design.
+        </div>
+
+        <button onclick="viewDetails()">
+            View Details
+        </button>
+
+        <div id="details"></div>
+
+    </div>
+
+
+    <script>
+
+        function showInfo() {
+            document.getElementById("extraInfo").style.display = "block";
+
+            document.getElementById("productImage").style.transform =
+                "scale(1.05)";
+
+            document.getElementById("productImage").style.filter =
+                "brightness(0.8)";
+        }
+
+
+        function hideInfo() {
+            document.getElementById("extraInfo").style.display = "none";
+
+            document.getElementById("productImage").style.transform =
+                "scale(1)";
+
+            document.getElementById("productImage").style.filter =
+                "brightness(1)";
+        }
+
+
+        function viewDetails() {
+
+            document.getElementById("details").innerHTML =
+                "Price: $499 | Availability: In Stock";
+
+        }
+
+    </script>
+
+</body>
+</html>

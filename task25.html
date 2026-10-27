@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Registration</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+            max-width: 650px;
+            width: 100%;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+            color: #4c1d95;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .video-container {
+            text-align: center;
+            margin-bottom: 30px;
+            background: #f5f3ff;
+            padding: 18px;
+            border-radius: 12px;
+            border: 1px solid #ddd6fe;
+        }
+        .video-container label {
+            color: #5b21b6;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        video {
+            width: 100%;
+            max-width: 500px;
+            height: 280px;
+            border-radius: 10px;
+            background-color: #111827;
+            display: block;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #374151;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #c4b5fd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+            background-color: #fafaff;
+        }
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #c4b5fd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 14px;
+            background-color: #fafaff;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            outline: none;
+            border: 2px solid #7c3aed;
+            background-color: #ffffff;
+            box-shadow: 0 0 6px rgba(124, 58, 237, 0.2);
+        }
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            padding: 12px;
+            background-color: #f5f3ff;
+            border-radius: 8px;
+            border: 1px solid #ddd6fe;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            margin: 0;
+            color: #4b5563;
+        }
+        .radio-group input,
+        .checkbox-group input {
+            accent-color: #7c3aed;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        button {
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button[type="submit"] {
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: white;
+        }
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(79, 70, 229, 0.35);
+        }
+        button[type="reset"] {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+        button[type="reset"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(220, 38, 38, 0.35);
+        }
+        .error {
+            color: #991b1b;
+            background-color: #fee2e2;
+            border: 1px solid #fca5a5;
+            padding: 14px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #result {
+            margin: 30px auto;
+            width: 100%;
+            max-width: 900px;
+        }
+        #result h2 {
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .result-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .result-table th {
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: white;
+            padding: 14px;
+            text-align: left;
+        }
+        .result-table td {
+            padding: 12px;
+            border: 1px solid #e5e7eb;
+            color: #374151;
+        }
+        .result-table tr:nth-child(even) {
+            background-color: #f5f3ff;
+        }
+        .result-table tr:hover {
+            background-color: #ede9fe;
+        }
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 22px;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+            video {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Employee Registration</h2>
+
+        <div class="video-container">
+
+            <label>Welcome Video</label>
+
+            <video controls>
+
+                <source
+                    src="https://www.pexels.com/download/video/9484887/"
+                    type="video/mp4">
+
+                Your browser does not support the video tag.
+
+            </video>
+
+        </div>
+
+        <form id="employeeForm">
+
+            <div class="form-group">
+
+                <label for="fullName">Full Name</label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your full name"
+                    minlength="3"
+                    maxlength="50"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="empId">Employee ID</label>
+
+                <input
+                    type="text"
+                    id="empId"
+                    name="empId"
+                    placeholder="EMP12345"
+                    pattern="[A-Z]{3}[0-9]{5}"
+                    title="ID must contain 3 uppercase letters followed by 5 digits"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@company.com"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="password">Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Minimum 8 characters"
+                    minlength="8"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="confirm_password">Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                    placeholder="Re-enter password"
+                    minlength="8"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="dob">Date of Birth</label>
+
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    min="1950-01-01"
+                    max="2010-12-31"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Gender</label>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Male"
+                            required>
+                        Male
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Other">
+                        Other
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="department">Department</label>
+
+                <select
+                    id="department"
+                    name="department"
+                    required>
+
+                    <option value="">Select your department</option>
+
+                    <option value="Human Resources">
+                        Human Resources
+                    </option>
+
+                    <option value="Engineering">
+                        Engineering
+                    </option>
+
+                    <option value="Marketing">
+                        Marketing
+                    </option>
+
+                    <option value="Sales">
+                        Sales
+                    </option>
+
+                    <option value="Finance">
+                        Finance
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Skills</label>
+
+                <div class="checkbox-group">
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="HTML5">
+                        HTML5
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="CSS3">
+                        CSS3
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="JavaScript">
+                        JavaScript
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="Python">
+                        Python
+                    </label>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="mobile">Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    placeholder="10-digit mobile number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="profilePhoto">
+                    Upload Profile Photo
+                </label>
+
+                <input
+                    type="file"
+                    id="profilePhoto"
+                    name="profilePhoto"
+                    accept="image/*"
+                    required>
+
+            </div>
+
+            <div class="button-group">
+
+                <button type="submit">
+                    Submit
+                </button>
+
+                <button type="reset">
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+
+        document.getElementById("employeeForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let fullName = document.getElementById("fullName").value.trim();
+            let empId = document.getElementById("empId").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm_password").value;
+            let dob = document.getElementById("dob").value;
+            let mobile = document.getElementById("mobile").value.trim();
+            let department = document.getElementById("department").value;
+            let profilePhoto = document.getElementById("profilePhoto").files[0];
+
+            let gender = document.querySelector(
+                'input[name="gender"]:checked'
+            );
+
+            let skills = document.querySelectorAll(
+                'input[name="skills"]:checked'
+            );
+
+            if (
+                fullName === "" ||
+                empId === "" ||
+                email === "" ||
+                password === "" ||
+                confirmPassword === "" ||
+                dob === "" ||
+                mobile === "" ||
+                department === "" ||
+                !gender ||
+                skills.length === 0 ||
+                !profilePhoto
+            ) {
+
+                document.getElementById("result").innerHTML =
+                    "<p class='error'>Please fill in all the fields.</p>";
+
+                return;
+            }
+
+            if (password !== confirmPassword) {
+
+                document.getElementById("result").innerHTML =
+                    "<p class='error'>Passwords do not match.</p>";
+
+                return;
+            }
+
+            let skillList = [];
+
+            skills.forEach(function(skill) {
+                skillList.push(skill.value);
+            });
+
+            let output = `
+
+                <h2>Employee Registration Details</h2>
+
+                <table class="result-table">
+
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                    </tr>
+
+                    <tr>
+                        <td>Full Name</td>
+                        <td>${fullName}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Employee ID</td>
+                        <td>${empId}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Email Address</td>
+                        <td>${email}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Password</td>
+                        <td>${"*".repeat(password.length)}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td>${dob}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Gender</td>
+                        <td>${gender.value}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Department</td>
+                        <td>${department}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Skills</td>
+                        <td>${skillList.join(", ")}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mobile Number</td>
+                        <td>${mobile}</td>
+                    </tr>
+
+                    <tr>
+                        <td>Profile Photo</td>
+                        <td>${profilePhoto.name}</td>
+                    </tr>
+
+                </table>
+            `;
+
+            document.getElementById("result").innerHTML = output;
+
+        });
+
+        document.getElementById("employeeForm").addEventListener("reset", function() {
+
+            document.getElementById("result").innerHTML = "";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

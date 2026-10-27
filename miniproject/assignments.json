@@ -1,0 +1,1158 @@
+[
+  {
+    "id": "collegeevents-index-html",
+    "order": 1,
+    "title": "College Events 2026 - Bootstrap Auth Portal",
+    "filename": "index.html",
+    "relPath": "CollegeEvents/index.html",
+    "category": "Interactive Components",
+    "description": "Comprehensive Bootstrap 5 collegiate event management application with responsive navbar, authentication modals, event cards, and gallery.",
+    "technologies": [
+      "HTML5",
+      "Bootstrap 5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Bootstrap 5 Framework",
+      "Responsive Grid",
+      "Authentication Modals",
+      "Event Scheduling"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [
+      {
+        "reference": "bootstrap/bootstrap.bundle.min.js",
+        "note": "Referenced path \"bootstrap/bootstrap.bundle.min.js\" not found on disk."
+      }
+    ],
+    "hasMissingAssets": true
+  },
+  {
+    "id": "shoppingcart-cart-html",
+    "order": 2,
+    "title": "Shopping Cart - Order Summary",
+    "filename": "cart.html",
+    "relPath": "ShoppingCart/cart.html",
+    "category": "Interactive Components",
+    "description": "Step 3 of checkout displaying order line items, quantity adjustments, calculated taxes, and total payable amount.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Dynamic Calculation",
+      "Order Review",
+      "Cart Table",
+      "Total Pricing"
+    ],
+    "events": {
+      "mouse": [
+        "onclick"
+      ],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "shoppingcart-customer-html",
+    "order": 3,
+    "title": "Shopping Cart - Customer & Delivery",
+    "filename": "customer.html",
+    "relPath": "ShoppingCart/customer.html",
+    "category": "Forms & Validation",
+    "description": "Step 1 of the e-commerce checkout flow collecting customer address, contact phone, delivery instructions, and validation.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Address Form",
+      "Form Validation",
+      "Checkout Progression"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "shoppingcart-index-html",
+    "order": 4,
+    "title": "E-Commerce Shopping Cart Portal",
+    "filename": "index.html",
+    "relPath": "ShoppingCart/index.html",
+    "category": "Interactive Components",
+    "description": "Multi-stage e-commerce checkout application linking customer details, payment methods, and live cart summary calculation.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Multi-page Workflow",
+      "Session State Flow",
+      "E-Commerce UI",
+      "Checkout Funnel"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "shoppingcart-payment-html",
+    "order": 5,
+    "title": "Shopping Cart - Payment Gateway",
+    "filename": "payment.html",
+    "relPath": "ShoppingCart/payment.html",
+    "category": "Forms & Validation",
+    "description": "Step 2 of the checkout funnel featuring payment method selection (Credit/Debit Card, UPI, Net Banking, Cash on Delivery).",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Payment UI",
+      "Radio Group Switching",
+      "Card Validation",
+      "Secure Checkout"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task10-html",
+    "order": 6,
+    "title": "Table-Based Website Layout",
+    "filename": "task10.html",
+    "relPath": "task10.html",
+    "category": "HTML Fundamentals",
+    "description": "Classic table layout architecture demonstrating multi-row and multi-column website structure with header, sidebar, and content.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "HTML Tables",
+      "Rowspan & Colspan",
+      "Grid Layout via Tables",
+      "Navigation Links"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task11-html",
+    "order": 7,
+    "title": "Employee Management Portal",
+    "filename": "task11.html",
+    "relPath": "task11.html",
+    "category": "HTML Fundamentals",
+    "description": "Enterprise HR management interface featuring navigation tabs, employee directory table, and payroll sections.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Navigation Bar",
+      "Data Tables",
+      "Corporate Layout",
+      "CSS Styling"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task12-html",
+    "order": 8,
+    "title": "Wireframe Layout Prototype",
+    "filename": "task12.html",
+    "relPath": "task12.html",
+    "category": "HTML Fundamentals",
+    "description": "Visual wireframe layout prototype demonstrating header, left sidebar navigation, main content, and footer structure.",
+    "technologies": [
+      "HTML5"
+    ],
+    "concepts": [
+      "Wireframing",
+      "Layout Architecture",
+      "Block Elements"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task13-html",
+    "order": 9,
+    "title": "Hospital Management System",
+    "filename": "task13.html",
+    "relPath": "task13.html",
+    "category": "Forms & Validation",
+    "description": "Healthcare administration portal featuring branch selector, department dropdown, and hospital service details.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Select Dropdowns",
+      "Form Controls",
+      "Institutional Layout"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task14-html",
+    "order": 10,
+    "title": "CityCare Hospital Healthcare Portal",
+    "filename": "task14.html",
+    "relPath": "task14.html",
+    "category": "Multimedia & Layouts",
+    "description": "Modern hospital web presence with appointment booking highlights, doctor directory, department listings, and hospital overview.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Navigation Menu",
+      "Service Cards",
+      "CSS Layout",
+      "Call to Action"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task15-html",
+    "order": 11,
+    "title": "Smart Product Search Engine",
+    "filename": "task15.html",
+    "relPath": "task15.html",
+    "category": "Interactive Components",
+    "description": "Interactive e-commerce search interface with category filtering, price sliders, search input, and interactive hover feedback.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Interactive Hover",
+      "Search Filtering",
+      "CSS Transitions",
+      "Event Listeners"
+    ],
+    "events": {
+      "mouse": [
+        "onmouseover",
+        "onmouseout"
+      ],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task16-html",
+    "order": 12,
+    "title": "GameZone - MLBB Portal",
+    "filename": "task16.html",
+    "relPath": "task16.html",
+    "category": "Multimedia & Layouts",
+    "description": "Exciting gaming landing page for Mobile Legends: Bang Bang featuring banner artwork, tournament listings, and game overview.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Gaming UI Theme",
+      "Hero Banner",
+      "Media Layout",
+      "Feature Grid"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task17-html",
+    "order": 13,
+    "title": "Moonton Games Corporate Profile",
+    "filename": "task17.html",
+    "relPath": "task17.html",
+    "category": "Multimedia & Layouts",
+    "description": "Detailed company profile page featuring embedded media, corporate milestones, leadership information, and contact forms.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Corporate Branding",
+      "Video/Media Elements",
+      "Grid Layout",
+      "About Us Section"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task18-html",
+    "order": 14,
+    "title": "Digital Library Management System",
+    "filename": "task18.html",
+    "relPath": "task18.html",
+    "category": "Interactive Components",
+    "description": "Campus library dashboard featuring book catalog cards, member management section, digital book issues, and visual tiles.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Card Grids",
+      "Catalog Display",
+      "CSS Flexbox",
+      "Image Badges"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task19-html",
+    "order": 15,
+    "title": "Healthcare Footer Component",
+    "filename": "task19.html",
+    "relPath": "task19.html",
+    "category": "HTML Fundamentals",
+    "description": "Polished website footer component with quick links, contact info, social handles, and copyright notice for healthcare portal.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Footer Layout",
+      "Flexbox Alignment",
+      "Link Columns",
+      "Social Links"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task21-html",
+    "order": 16,
+    "title": "Student Login Portal (Audio Assisted)",
+    "filename": "task21.html",
+    "relPath": "task21.html",
+    "category": "Forms & Validation",
+    "description": "Secure student login interface featuring embedded audio login instructions, credential fields, and portal access controls.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Audio API"
+    ],
+    "concepts": [
+      "Audio Media Element",
+      "Form Input Types",
+      "Password Masking",
+      "Portal Authentication"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [
+      {
+        "reference": "audio/login-instructions.mp3",
+        "note": "Referenced path \"audio/login-instructions.mp3\" not found on disk."
+      }
+    ],
+    "hasMissingAssets": true
+  },
+  {
+    "id": "task22-html",
+    "order": 17,
+    "title": "National Technical Symposium Registration",
+    "filename": "task22.html",
+    "relPath": "task22.html",
+    "category": "Forms & Validation",
+    "description": "Comprehensive symposium registration form with promotional video embed, event tracks selection, and team member fields.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "HTML5 Video"
+    ],
+    "concepts": [
+      "Video Integration",
+      "Multi-input Form",
+      "Radio & Checkbox Groups",
+      "Event Registration"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task23-html",
+    "order": 18,
+    "title": "Patient Clinical Registration Form",
+    "filename": "task23.html",
+    "relPath": "task23.html",
+    "category": "Forms & Validation",
+    "description": "Medical patient registration form featuring regex pattern validation, contact inputs, insurance details, and real-time validation.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Input Pattern Matching",
+      "Regex Validation",
+      "Form Fieldsets",
+      "Error Feedback"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": [
+        "oninput"
+      ]
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task25-html",
+    "order": 19,
+    "title": "Corporate Employee Registration & Orientation",
+    "filename": "task25.html",
+    "relPath": "task25.html",
+    "category": "Forms & Validation",
+    "description": "Full-featured enterprise onboarding registration page with welcome orientation video, personal data, and department assignment.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "HTML5 Video"
+    ],
+    "concepts": [
+      "HTML5 Video Player",
+      "Comprehensive Forms",
+      "Fieldsets & Legends",
+      "Input Types"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task26-html",
+    "order": 20,
+    "title": "Student Portal Login & Audio Guide",
+    "filename": "task26.html",
+    "relPath": "task26.html",
+    "category": "Forms & Validation",
+    "description": "Student authentication portal with instructional voiceover guidance, validation checks, and responsive form styling.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Audio API"
+    ],
+    "concepts": [
+      "Audio Guidance",
+      "Form Handling",
+      "Authentication UI",
+      "Responsive Design"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [
+      {
+        "reference": "audio/login-instructions.mp3",
+        "note": "Referenced path \"audio/login-instructions.mp3\" not found on disk."
+      }
+    ],
+    "hasMissingAssets": true
+  },
+  {
+    "id": "task27-html",
+    "order": 21,
+    "title": "Student Academic Registration Form",
+    "filename": "task27.html",
+    "relPath": "task27.html",
+    "category": "Forms & Validation",
+    "description": "Structured academic registration form built with HTML tables, skill checkboxes, gender radios, and department selections.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Form Table Layout",
+      "Multi-choice Inputs",
+      "Form Actions",
+      "Data Collection"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task28-html",
+    "order": 22,
+    "title": "University Course Registration System",
+    "filename": "task28.html",
+    "relPath": "task28.html",
+    "category": "Forms & Validation",
+    "description": "Course enrollment interface allowing students to select semester, elective courses, prerequisites, and submission handling.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Dropdown Selectors",
+      "Checkbox Arrays",
+      "Academic Workflows",
+      "Input Verification"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task29-html",
+    "order": 23,
+    "title": "Mouse Event Playground",
+    "filename": "task29.html",
+    "relPath": "task29.html",
+    "category": "Mouse Events",
+    "description": "Interactive mouse event demonstration showing real-time feedback on click, mouseover, and mouseout events with dynamic DOM updates.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "onclick",
+      "onmouseover",
+      "onmouseout",
+      "DOM Manipulation",
+      "Dynamic Style Changes"
+    ],
+    "events": {
+      "mouse": [
+        "onclick",
+        "onmouseover",
+        "onmouseout"
+      ],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task3-html",
+    "order": 24,
+    "title": "Personal Portfolio Page",
+    "filename": "task3.html",
+    "relPath": "task3.html",
+    "category": "HTML Fundamentals",
+    "description": "Personal web portfolio showcasing student background, skills, education, and social profiles using semantic HTML structure and CSS styling.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Semantic HTML",
+      "Profile Card",
+      "CSS Layout",
+      "Lists & Hyperlinks"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task30-html",
+    "order": 25,
+    "title": "Interactive E-Commerce Product Card",
+    "filename": "task30.html",
+    "relPath": "task30.html",
+    "category": "Mouse Events",
+    "description": "Dynamic product card demonstrating mouse hover animations, image zoom effect, and click-to-cart confirmation modal.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Mouse Hover Effects",
+      "Event Handlers",
+      "Transform & Transition",
+      "Interactive Shopping"
+    ],
+    "events": {
+      "mouse": [
+        "onmouseover",
+        "onmouseout",
+        "onclick"
+      ],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task31-html",
+    "order": 26,
+    "title": "Interactive Traffic Signal Simulator",
+    "filename": "task31.html",
+    "relPath": "task31.html",
+    "category": "Mouse Events",
+    "description": "Realistic 3-state traffic signal light simulator with interactive mouse events changing signal colors and status messages.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "State Switching",
+      "Mouse Interactions",
+      "CSS Lighting Effects",
+      "DOM Class Toggling"
+    ],
+    "events": {
+      "mouse": [
+        "onmouseover",
+        "onmouseout"
+      ],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task32-html",
+    "order": 27,
+    "title": "Dynamic Weather Status Widget",
+    "filename": "task32.html",
+    "relPath": "task32.html",
+    "category": "Mouse Events",
+    "description": "Interactive weather card displaying Sunny, Cloudy, and Rainy states on mouseover with animated temperature and atmosphere icons.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Hover Triggers",
+      "Dynamic Content Update",
+      "Theme Styling",
+      "Visual Indicators"
+    ],
+    "events": {
+      "mouse": [
+        "onmouseover",
+        "onmouseout"
+      ],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task33-html",
+    "order": 28,
+    "title": "VIT Campus Interactive Button Hover",
+    "filename": "task33.html",
+    "relPath": "task33.html",
+    "category": "Mouse Events",
+    "description": "Interactive campus action button responding to mouse movements with dynamic color transitions and informative tooltips.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Mouse Enter/Leave",
+      "Color Transitions",
+      "Interactive Buttons",
+      "Tooltip Feedback"
+    ],
+    "events": {
+      "mouse": [
+        "onmouseover",
+        "onmouseout"
+      ],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task34-html",
+    "order": 29,
+    "title": "Instant Student Search (Key Events)",
+    "filename": "task34.html",
+    "relPath": "task34.html",
+    "category": "Keyboard Events",
+    "description": "Live student directory lookup utilizing keyboard onkeydown events to filter records instantly as the user types.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "onkeydown Event",
+      "Key Code Handling",
+      "Instant Filtering",
+      "DOM Search"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [
+        "onkeydown"
+      ],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task35-html",
+    "order": 30,
+    "title": "Virtual ATM PIN Entry Terminal",
+    "filename": "task35.html",
+    "relPath": "task35.html",
+    "category": "Keyboard Events",
+    "description": "Realistic banking ATM PIN entry keypad utilizing keyboard events, automatic digit masking, and PIN length verification.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Keyboard Input Masking",
+      "Key Code Validation",
+      "Security Constraints",
+      "ATM UI Simulation"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [
+        "onkeydown"
+      ],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task36-html",
+    "order": 31,
+    "title": "Real-Time Student Search & Highlight",
+    "filename": "task36.html",
+    "relPath": "task36.html",
+    "category": "Keyboard Events",
+    "description": "Interactive student search component supporting both onkeydown and oninput events with real-time text matching and highlighting.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "oninput vs onkeydown",
+      "Live Filtering",
+      "List Traversal",
+      "Search Feedback"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [
+        "onkeydown"
+      ],
+      "form": [
+        "oninput"
+      ]
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task37-html",
+    "order": 32,
+    "title": "Interactive Online Examination Portal",
+    "filename": "task37.html",
+    "relPath": "task37.html",
+    "category": "Interactive Components",
+    "description": "Quiz interface featuring question prompts, interactive answer option selection, instant hover highlights, and answer evaluation.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Radio Selection",
+      "Instant Feedback",
+      "Score Evaluation",
+      "Hover Transitions"
+    ],
+    "events": {
+      "mouse": [
+        "onclick",
+        "onmouseover",
+        "onmouseout"
+      ],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task38-html",
+    "order": 33,
+    "title": "VIT Campus Photo Gallery (Keyboard Nav)",
+    "filename": "task38.html",
+    "relPath": "task38.html",
+    "category": "Keyboard Events",
+    "description": "Keyboard-controlled photo gallery allowing navigation with Left/Right arrow keys and Enter key for full preview mode.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Arrow Key Navigation",
+      "Keyboard Shortcuts",
+      "Active Slide Index",
+      "Image Gallery"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task39-html",
+    "order": 34,
+    "title": "Travel Photo Gallery (Hotkey Controls)",
+    "filename": "task39.html",
+    "relPath": "task39.html",
+    "category": "Keyboard Events",
+    "description": "Hot-key controlled destination viewer supporting \"N\" for next, \"P\" for previous, and Spacebar for destination information reveal.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "concepts": [
+      "Custom Hotkeys (N/P/Space)",
+      "Keyboard Event Listeners",
+      "Slide State",
+      "Modal Reveal"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task4-html",
+    "order": 35,
+    "title": "Travel Bucket List",
+    "filename": "task4.html",
+    "relPath": "task4.html",
+    "category": "HTML Fundamentals",
+    "description": "Travel destination showcase using ordered, unordered, and definition lists, styling dream destinations and activities.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Ordered & Unordered Lists",
+      "Definition Lists",
+      "Text Formatting",
+      "Hyperlinks"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task40-html",
+    "order": 36,
+    "title": "College Events 2026 Celebration Portal",
+    "filename": "task40.html",
+    "relPath": "task40.html",
+    "category": "Multimedia & Layouts",
+    "description": "College event celebration landing page featuring countdown banner, event schedules, gallery showcase, and RSVP form.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Event Landing Page",
+      "Sticky Header",
+      "Card Layout",
+      "Contact RSVP"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task5-html",
+    "order": 37,
+    "title": "Science & Technology Article",
+    "filename": "task5.html",
+    "relPath": "task5.html",
+    "category": "HTML Fundamentals",
+    "description": "Structured educational article highlighting advances in modern technology, medicine, and computing with formatted typography.",
+    "technologies": [
+      "HTML5"
+    ],
+    "concepts": [
+      "Headings Hierarchy",
+      "Paragraph Typography",
+      "Emphasis & Formatting"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task6-html",
+    "order": 38,
+    "title": "Employee Profile Card",
+    "filename": "task6.html",
+    "relPath": "task6.html",
+    "category": "HTML Fundamentals",
+    "description": "Corporate employee information card displaying designation, profile details, and company information.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Card Layout",
+      "Profile Details",
+      "CSS Styling"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task7-html",
+    "order": 39,
+    "title": "World Travel Destinations",
+    "filename": "task7.html",
+    "relPath": "task7.html",
+    "category": "Multimedia & Layouts",
+    "description": "Visual showcase of international tourist destinations featuring responsive imagery, destination overviews, and travel highlights.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Image Elements",
+      "Content Sections",
+      "Responsive Imagery"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task8-html",
+    "order": 40,
+    "title": "Digital Employee ID Card",
+    "filename": "task8.html",
+    "relPath": "task8.html",
+    "category": "HTML Fundamentals",
+    "description": "Compact badge layout resembling an official corporate ID card with avatar, role tags, and ID badge styling.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Box Model",
+      "Border Radius",
+      "Card Layout",
+      "Typography"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "task9-html",
+    "order": 41,
+    "title": "Computer Science Department Portal",
+    "filename": "task9.html",
+    "relPath": "task9.html",
+    "category": "HTML Fundamentals",
+    "description": "Academic department portal featuring overview, faculty, academic programs, research areas, and contact links.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "concepts": [
+      "Multi-section Layout",
+      "Anchor Navigation",
+      "List Formatting"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  },
+  {
+    "id": "test-html",
+    "order": 42,
+    "title": "Dynamic Math Squares Table Generator",
+    "filename": "test.html",
+    "relPath": "test.html",
+    "category": "Interactive Components",
+    "description": "Algorithmic JavaScript experiment calculating and rendering mathematical squares (1 to 10) dynamically using document.write in a formatted table.",
+    "technologies": [
+      "HTML5",
+      "JavaScript"
+    ],
+    "concepts": [
+      "for Loops",
+      "document.write",
+      "Mathematical Operations",
+      "Dynamic HTML Tables"
+    ],
+    "events": {
+      "mouse": [],
+      "keyboard": [],
+      "form": []
+    },
+    "missingAssets": [],
+    "hasMissingAssets": false
+  }
+]

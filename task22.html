@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>National Technical Symposium Registration</title>
+</head>
+
+<body>
+
+    <h1>National Technical Symposium</h1>
+    <h2>Registration Portal</h2>
+
+    <p>Register below to participate in the technical symposium.</p>
+
+    <form action="#" method="post">
+
+        <h3>Participant Details</h3>
+
+        <label for="name">Participant Name:</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your full name"
+               minlength="3"
+               required>
+        <br><br>
+
+        <label for="regno">Register Number:</label>
+        <input type="text" id="regno" name="regno"
+               placeholder="Enter register number"
+               required>
+        <br><br>
+
+        <label for="college">College Name:</label>
+        <input type="text" id="college" name="college"
+               placeholder="Enter college name"
+               required>
+        <br><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email"
+               placeholder="example@gmail.com"
+               required>
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile"
+               placeholder="Enter 10-digit mobile number"
+               pattern="[0-9]{10}"
+               maxlength="10"
+               required>
+        <br><br>
+
+
+        <h3>Personal Information</h3>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+
+        <p>Gender:</p>
+
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+
+        <br><br>
+
+
+        <h3>Technical Information</h3>
+
+        <label for="department">Department:</label>
+
+        <select id="department" name="department" required>
+            <option value="">-- Select Department --</option>
+            <option value="CSE">Computer Science and Engineering</option>
+            <option value="ECE">Electronics and Communication Engineering</option>
+            <option value="EEE">Electrical and Electronics Engineering</option>
+            <option value="MECH">Mechanical Engineering</option>
+            <option value="CIVIL">Civil Engineering</option>
+        </select>
+
+        <br><br>
+
+        <p>Technical Skills:</p>
+
+        <input type="checkbox" id="java" name="skills" value="Java">
+        <label for="java">Java</label>
+
+        <input type="checkbox" id="python" name="skills" value="Python">
+        <label for="python">Python</label>
+
+        <input type="checkbox" id="web" name="skills" value="Web Development">
+        <label for="web">Web Development</label>
+
+        <input type="checkbox" id="ai" name="skills" value="AI">
+        <label for="ai">Artificial Intelligence</label>
+
+        <br><br>
+
+        <label for="idcard">Upload Student ID Card:</label>
+        <input type="file" id="idcard" name="idcard"
+               accept=".jpg,.jpeg,.png,.pdf"
+               required>
+
+        <br><br>
+
+
+        <h3>Event Details</h3>
+
+        <label for="eventdate">Event Date:</label>
+        <input type="date" id="eventdate" name="eventdate" required>
+
+        <br><br>
+
+
+        <h3>Symposium Information</h3>
+
+        <p>Watch the introductory video:</p>
+
+        <video width="500" controls>
+            <source src="audio/symposium.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+
+        <br><br>
+
+        <p>Welcome Message:</p>
+
+        <audio controls>
+            <source src="audio/welcome.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <br><br>
+
+
+        <input type="submit" value="Submit Registration">
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+</body>
+</html>

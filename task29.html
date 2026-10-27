@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Event Handling</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+        #box {
+            width: 300px;
+            height: 180px;
+            background-color: skyblue;
+            margin: 30px auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        #message {
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Mouse Events</h1>
+    <div id="box"
+         onclick="changeColor()"
+         onmouseover="showMessage()"
+         onmouseout="hideMessage()">
+        Click or Move Mouse Here
+    </div>
+    <p id="message"></p>
+    <script>
+        function changeColor() {
+            let box = document.getElementById("box");
+            let colors = [
+                "lightcoral",
+                "lightgreen",
+                "gold",
+                "plum",
+                "orange"
+            ];
+            let randomColor =
+                colors[Math.floor(Math.random() * colors.length)];
+            box.style.backgroundColor = randomColor;
+        }
+        function showMessage() {
+            document.getElementById("message").innerHTML =
+                "Mouse is over the box";
+        }
+        function hideMessage() {
+            document.getElementById("message").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

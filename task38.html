@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VIT Campus Gallery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #3730a3;
+        }
+
+        #campusImage {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #166534;
+            height: 30px;
+        }
+
+        p {
+            color: #4b5563;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>VIT Campus Gallery</h1>
+
+        <p>
+            Use Left Arrow and Right Arrow to change images.
+            Press Enter to select an image.
+        </p>
+
+        <img
+            id="campusImage"
+            src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=800"
+            alt="VIT Campus">
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+
+        let images = [
+            "https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=800",
+            "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800",
+            "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=800"
+        ];
+
+        let currentImage = 0;
+
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "ArrowRight") {
+
+                currentImage++;
+
+                if (currentImage >= images.length) {
+                    currentImage = 0;
+                }
+
+                document.getElementById("campusImage").src =
+                    images[currentImage];
+
+                document.getElementById("message").innerHTML = "";
+
+            }
+
+
+            else if (event.key === "ArrowLeft") {
+
+                currentImage--;
+
+                if (currentImage < 0) {
+                    currentImage = images.length - 1;
+                }
+
+                document.getElementById("campusImage").src =
+                    images[currentImage];
+
+                document.getElementById("message").innerHTML = "";
+
+            }
+
+
+            else if (event.key === "Enter") {
+
+                document.getElementById("message").innerHTML =
+                    "Image Selected";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

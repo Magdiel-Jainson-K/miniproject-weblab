@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            margin: 0;
+            padding: 40px;
+        }
+        .container {
+            width: 420px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        h1 {
+            text-align: center;
+            color: #3730a3;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .role-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 8px;
+        }
+        .role-group label {
+            font-weight: normal;
+            display: inline;
+        }
+        .links {
+            margin: 18px 0;
+            line-height: 1.8;
+        }
+        .links a {
+            color: #4f46e5;
+            text-decoration: none;
+        }
+        audio {
+            width: 100%;
+            margin: 10px 0;
+        }
+        .buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            flex: 1;
+            padding: 11px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"] {
+            background-color: #4f46e5;
+            color: white;
+        }
+        input[type="reset"] {
+            background-color: #dc2626;
+            color: white;
+        }
+        #output {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #ecfdf5;
+            border: 1px solid #86efac;
+            color: #166534;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Login Portal</h1>
+        <p>Please enter your details to access your account.</p>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">
+                    Username or Email Address:
+                </label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter username or email">
+                <div id="usernameError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">
+                    Password:
+                </label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password">
+                <div id="passwordError" class="error"></div>
+            </div>
+            <div class="form-group">
+                <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember">
+                <label for="remember" style="display:inline;">
+                    Remember Me
+                </label>
+            </div>
+            <div class="form-group">
+                <p><b>Select User Role:</b></p>
+                <div class="role-group">
+                    <label>
+                        <input
+                            type="radio"
+                            id="student"
+                            name="role"
+                            value="Student">
+                        Student
+                    </label>
+                    <label>
+                        <input
+                            type="radio"
+                            id="faculty"
+                            name="role"
+                            value="Faculty">
+                        Faculty
+                    </label>
+                </div>
+                <div id="roleError" class="error"></div>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+                <br>
+                <a href="#">Create New Account</a>
+            </div>
+            <audio controls>
+                <source
+                    src="audio/login-instructions.mp3"
+                    type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <p>Login Instructions</p>
+            <div class="buttons">
+                <input
+                    type="submit"
+                    value="Login">
+                <input
+                    type="reset"
+                    value="Clear">
+            </div>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let role = document.querySelector('input[name="role"]:checked');
+            let usernameError = document.getElementById("usernameError");
+            let passwordError = document.getElementById("passwordError");
+            let roleError = document.getElementById("roleError");
+            let output = document.getElementById("output");
+            usernameError.innerHTML = "";
+            passwordError.innerHTML = "";
+            roleError.innerHTML = "";
+            output.style.display = "none";
+            let valid = true;
+            if (username === "") {
+
+                usernameError.innerHTML =
+                    "Please enter your username or email.";
+
+                valid = false;
+            }
+            if (password === "") {
+
+                passwordError.innerHTML =
+                    "Please enter your password.";
+
+                valid = false;
+            }
+            if (role === null) {
+
+                roleError.innerHTML =
+                    "Please select a user role.";
+
+                valid = false;
+            }
+            if (!valid) {
+                return;
+            }
+            output.innerHTML =
+                "<h3>Login Successful</h3>" +
+                "<p><b>Username:</b> " + username + "</p>" +
+                "<p><b>Role:</b> " + role.value + "</p>";
+
+            output.style.display = "block";
+
+        });
+
+        document.getElementById("loginForm").addEventListener("reset", function() {
+
+            document.getElementById("usernameError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("roleError").innerHTML = "";
+
+            document.getElementById("output").innerHTML = "";
+            document.getElementById("output").style.display = "none";
+
+        });
+
+    </script>
+
+</body>
+</html>

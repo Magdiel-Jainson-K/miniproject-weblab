@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Authentication Section */
+
+.auth-section {
+    padding: 50px 20px;
+    min-height: 500px;
+}
+
+.auth-section h2 {
+    color: #003366;
+    font-size: 30px;
+}
+
+/* Authentication Boxes */
+
+.auth-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+/* Box Headings */
+
+.auth-box h3 {
+    color: #003366;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Form Labels */
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form Inputs */
+
+.form-control {
+    padding: 12px;
+    border-radius: 6px;
+}
+
+/* Buttons */
+
+.btn {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive Styling */
+
+@media (max-width: 576px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .auth-section {
+        padding: 30px 15px;
+    }
+
+    .auth-box {
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM PIN Entry</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e293b, #334155);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .atm {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        input {
+            width: 80%;
+            padding: 13px;
+            font-size: 20px;
+            text-align: center;
+            letter-spacing: 5px;
+            border: 2px solid #64748b;
+            border-radius: 7px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        #status {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        #warning {
+            margin-top: 12px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="atm">
+
+        <h1>ATM PIN Entry</h1>
+
+        <p>Enter your 4-digit PIN</p>
+
+        <input
+            type="password"
+            id="pin"
+            maxlength="4"
+            placeholder="Enter PIN"
+            onkeydown="checkKey(event)">
+
+        <div id="status"></div>
+
+        <div id="warning"></div>
+
+    </div>
+
+
+    <script>
+
+        function checkKey(event) {
+
+            let pin = document.getElementById("pin");
+            let status = document.getElementById("status");
+            let warning = document.getElementById("warning");
+
+
+            status.innerHTML = "PIN Entry Started";
+            warning.innerHTML = "";
+
+
+            if (event.key === "Enter") {
+
+                event.preventDefault();
+
+                status.innerHTML =
+                    "PIN Submitted Successfully";
+
+                return;
+            }
+
+
+            if (
+                !(
+                    (event.key >= "0" && event.key <= "9") ||
+                    event.key === "Backspace" ||
+                    event.key === "Delete"
+                )
+            ) {
+
+                event.preventDefault();
+
+                warning.innerHTML =
+                    "Warning: Please enter numbers only.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

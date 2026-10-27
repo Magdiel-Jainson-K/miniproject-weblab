@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Weather Status</title>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #bfdbfe, #e0f2fe);
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        .weather-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .weather {
+            width: 180px;
+            height: 230px;
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .weather img {
+            width: 150px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .weather h2 {
+            color: #374151;
+        }
+
+        .highlight {
+            transform: scale(1.08);
+            box-shadow: 0 0 25px rgba(37, 99, 235, 0.6);
+            background-color: #eff6ff;
+        }
+
+        #message {
+            margin-top: 35px;
+            height: 35px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Weather Status</h1>
+
+    <div class="weather-container">
+
+        <div class="weather"
+             onmouseover="showWeather('Perfect Day!', this)"
+             onmouseout="hideWeather(this)">
+
+            <img
+                src="https://images.unsplash.com/photo-1601297183305-6df142704ea2?w=500"
+                alt="Sunny Weather">
+
+            <h2>Sunny</h2>
+
+        </div>
+
+
+        <div class="weather"
+             onmouseover="showWeather('Cloudy Weather', this)"
+             onmouseout="hideWeather(this)">
+
+            <img
+                src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=500"
+                alt="Cloudy Weather">
+
+            <h2>Cloudy</h2>
+
+        </div>
+
+
+        <div class="weather"
+             onmouseover="showWeather('Carry an Umbrella!', this)"
+             onmouseout="hideWeather(this)">
+
+            <img
+                src="https://images.unsplash.com/photo-1519692933481-e162a57d6721?w=500"
+                alt="Rainy Weather">
+
+            <h2>Rainy</h2>
+
+        </div>
+
+    </div>
+
+
+    <div id="message"></div>
+
+
+    <script>
+
+        function showWeather(text, panel) {
+
+            document.getElementById("message").innerHTML = text;
+
+            panel.classList.add("highlight");
+        }
+
+
+        function hideWeather(panel) {
+
+            document.getElementById("message").innerHTML = "";
+
+            panel.classList.remove("highlight");
+        }
+
+    </script>
+
+</body>
+</html>

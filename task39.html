@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Photo Gallery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #fef3c7);
+            text-align: center;
+            padding: 40px;
+        }
+
+        .gallery {
+            width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #1e3a8a;
+        }
+
+        #travelImage {
+            width: 500px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #destination {
+            margin-top: 20px;
+            height: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #166534;
+        }
+
+        .instructions {
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="gallery">
+
+        <h1>Travel Photo Gallery</h1>
+
+        <p class="instructions">
+            Press N for Next | P for Previous | Spacebar to show destination
+        </p>
+
+        <img
+            id="travelImage"
+            src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800"
+            alt="Tokyo">
+
+        <div id="destination"></div>
+
+    </div>
+
+
+    <script>
+
+        let destinations = [
+            {
+                name: "Tokyo, Japan",
+                image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800"
+            },
+
+            {
+                name: "Paris, France",
+                image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800"
+            },
+
+            {
+                name: "Switzerland",
+                image: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800"
+            },
+
+            {
+                name: "New York, USA",
+                image: "https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=800"
+            }
+        ];
+
+        let currentIndex = 0;
+
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key.toLowerCase() === "n") {
+
+                currentIndex++;
+
+                if (currentIndex >= destinations.length) {
+                    currentIndex = 0;
+                }
+
+                document.getElementById("travelImage").src =
+                    destinations[currentIndex].image;
+
+                document.getElementById("destination").innerHTML = "";
+            }
+
+
+            else if (event.key.toLowerCase() === "p") {
+
+                currentIndex--;
+
+                if (currentIndex < 0) {
+                    currentIndex = destinations.length - 1;
+                }
+
+                document.getElementById("travelImage").src =
+                    destinations[currentIndex].image;
+
+                document.getElementById("destination").innerHTML = "";
+            }
+
+
+            else if (event.code === "Space") {
+
+                event.preventDefault();
+
+                document.getElementById("destination").innerHTML =
+                    destinations[currentIndex].name;
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

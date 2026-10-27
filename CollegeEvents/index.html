@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Events 2026 - Authentication</title>
+
+    <!-- External Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>College Events 2026</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                College Events
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Authentication Section -->
+    <main class="auth-section">
+
+        <div class="container">
+
+            <h2 class="text-center mb-4">
+                User Authentication
+            </h2>
+
+            <div class="row justify-content-center g-4">
+
+                <!-- Login Box -->
+                <div class="col-md-6 col-lg-5">
+
+                    <div class="auth-box">
+
+                        <h3 class="text-center mb-4">
+                            Login
+                        </h3>
+
+                        <form>
+
+                            <!-- Username / Email -->
+                            <div class="mb-3">
+                                <label for="loginEmail"
+                                       class="form-label">
+                                    Username/Email
+                                </label>
+
+                                <input type="text"
+                                       class="form-control"
+                                       id="loginEmail"
+                                       placeholder="Enter username or email"
+                                       required>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-3">
+                                <label for="loginPassword"
+                                       class="form-label">
+                                    Password
+                                </label>
+
+                                <input type="password"
+                                       class="form-control"
+                                       id="loginPassword"
+                                       placeholder="Enter password"
+                                       required>
+                            </div>
+
+                            <!-- Login Button -->
+                            <button type="submit"
+                                    class="btn btn-primary w-100">
+                                Login
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <!-- Registration Box -->
+                <div class="col-md-6 col-lg-5">
+
+                    <div class="auth-box">
+
+                        <h3 class="text-center mb-4">
+                            Registration
+                        </h3>
+
+                        <form>
+
+                            <!-- Full Name -->
+                            <div class="mb-3">
+                                <label for="fullName"
+                                       class="form-label">
+                                    Full Name
+                                </label>
+
+                                <input type="text"
+                                       class="form-control"
+                                       id="fullName"
+                                       placeholder="Enter full name"
+                                       required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="registerEmail"
+                                       class="form-label">
+                                    Email
+                                </label>
+
+                                <input type="email"
+                                       class="form-control"
+                                       id="registerEmail"
+                                       placeholder="Enter email"
+                                       required>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-3">
+                                <label for="registerPassword"
+                                       class="form-label">
+                                    Password
+                                </label>
+
+                                <input type="password"
+                                       class="form-control"
+                                       id="registerPassword"
+                                       placeholder="Enter password"
+                                       required>
+                            </div>
+
+                            <!-- Confirm Password -->
+                            <div class="mb-3">
+                                <label for="confirmPassword"
+                                       class="form-label">
+                                    Confirm Password
+                                </label>
+
+                                <input type="password"
+                                       class="form-control"
+                                       id="confirmPassword"
+                                       placeholder="Confirm password"
+                                       required>
+                            </div>
+
+                            <!-- Register Button -->
+                            <button type="submit"
+                                    class="btn btn-success w-100">
+                                Register
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 College Events</p>
+    </footer>
+
+    <!-- Optional Bootstrap JavaScript -->
+    <!-- Download bootstrap.bundle.min.js and place it in bootstrap/ -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
